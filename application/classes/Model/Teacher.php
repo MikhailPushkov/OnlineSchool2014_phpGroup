@@ -4,15 +4,52 @@ class Model_Teacher extends ORM {
 
     protected $_table_teacher ='teacher';
 
-    public function del($id){
+    protected $_table_columns=array(
+        'id'=>array(
+            'type'=>'int',
+            'is_nullable'=>false
 
-        $post = ORM::factory('teacher')->find($id);
-        $post->delete();
+        ),
+        'login'=>array(
+            'type'=>'varchar(55)',
+            'is_nullable'=>false
 
-    }
-    public function upadate($id){
+        ),
+        'password'=>array(
+            'type'=>'varchar(110)',
+            'is_nullable'=>false
 
-        $post = ORM::factory('teacher')->find($id);
-        $post->update();
-    }
+        ),
+        'f'=>array(
+            'type'=>'varchar(55)',
+            'is_nullable'=>false
+
+        ),
+        'i'=>array(
+            'type'=>'varchar(55)',
+            'is_nullable'=>false
+
+        ),
+        'o'=>array(
+            'type'=>'varchar(55)',
+            'is_nullable'=>false
+
+        ),
+        'email'=>array(
+            'type'=>'varchar(55)',
+            'is_nullable'=>false
+
+        ),
+        'phone'=>array(
+            'type'=>'varchar(30)',
+            'is_nullable'=>false
+
+        ),
+        'predmet'=>array(
+            'type'=>'varchar(45)',
+            'is_nullable'=>false
+
+        ),
+    );
+
 }

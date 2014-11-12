@@ -4,21 +4,17 @@ class Model_Articles extends ORM {
 
     protected $_table_article='articles';
 
+    protected $_table_columns=array(
+        'id'=>array(
+            'type'=>'int',
+            'is_nullable'=>false
 
-    public function add(){
+        ),
+        'artice'=>array(
+            'type'=>'varchar(55)',
+            'is_nullable'=>false
 
+        )
+    );
 
-    }
-
-    public function del(){
-
-        $post = ORM::factory('articles')->find($id);
-        $post->delete();
-
-    }
-    public function upadate()
-    {
-        $post = ORM::factory('articles')->find($id);
-        $post->update();
-    }
 }
