@@ -16,7 +16,7 @@
 
                                       <div class="form-group">
                                             <label for="exampleInputEmail1">Логин</label>
-                                            <input type="email" name="email_address" class="form-control" id="exampleInputEmail1" style="width:95%;" >
+                                            <input type="text" name="email_address" class="form-control" id="exampleInputEmail1" style="width:95%;" >
                                       </div>
                                       <div class="form-group">
                                         <label for="exampleInputPassword1">Пароль</label>

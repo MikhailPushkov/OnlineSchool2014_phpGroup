@@ -8,18 +8,24 @@ class Controller_Auth extends Controller_System_Base  {
         $this->txt = 'Электронная школа';
         $this->content = View::factory('pages/auth/login');
     }
-/*
-    public function action_login() {
 
-        if($post= $this->request->post()){
-            $user=Auth::instance()->login($post['username'],$post['password']);
-            if($user){
-                $this->redirect('main/admin');
-                exit;
-            }
+    public function action_login() {
+/*
+        if(count($_POST)==0){
+            $this->redirect(URL::base());
         }
-        $this->template=View::factory('login');
+        $this->a1->login($_POST['username'],$_POST['password']);
+            if($this->a2->allowed('admin', 'index'))
+                $this->redirect('admin');
+            elseif($this->a2->allowed('userspage', 'index'))
+                $this->redirect('userspage');
+            elseif($this->a2->allowed('userspage', 'index'))
+                $this->redirect('userspage');*/
     }
+    public  function action_logout(){
+
+    }
+    /*
   public  function  action_register(){
 
         if(HTTP_REQUEST::POST == $this->request->method()){
