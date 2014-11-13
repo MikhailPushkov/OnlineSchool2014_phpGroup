@@ -15,6 +15,12 @@ class Controller_Admin extends Controller_System_Base  {
         $this->txt = 'Учетные записи';
         $this->content = View::factory('pages/admin/adduserp');
     }
+    public function action_rasp()
+    {
+    	$this->title = 'Расписание';
+    	$this->txt ='Расписание для класса '  . $_POST['combo'];
+    	$this->content = View::factory('pages/rasp/rasp');
+    }
     public function action_addingus(){
         if (isset($_POST['rdbtn'])) {
             $selected_radio = $_POST['radio'];
