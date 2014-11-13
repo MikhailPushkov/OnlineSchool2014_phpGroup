@@ -1,4 +1,4 @@
-html {
+﻿html {
     height: 100%;
     width: 100%;
 }
@@ -324,4 +324,28 @@ input:focus:invalid {
     color: red;
     border-radius: 0 0 5px 5px;
     padding: 0.3em;
+}
+#cell{
+	size: 5px !important;
+	padding: 0;
+	width: 70px;
+	height: 30px;
+}
+.cbx{
+	margin:0 auto;
+	width: 60px;
+}
+#addrasp{
+    height:170px;
+    text-align: center;
+}
+.buttonadd{
+    size: 10;
+    margin:0 auto;
+}
+#btnR{
+	float: right;
+}
+#btnL{
+	float: left;
 }
