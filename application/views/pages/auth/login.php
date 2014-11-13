@@ -11,7 +11,7 @@
                                                   ">
                         <div class="centered">
 
-                              <form role="form"  action="login" name="form" method="post" >
+                              <form role="form"  action="admin" name="form" method="post" >
                                   <h3  style="text-align: center;">Авторизация</h3>
 
                                       <div class="form-group">

@@ -2,7 +2,7 @@
 
 class Model_Teacher extends ORM {
 
-    protected $_table_teacher ='teacher';
+    protected $_table_name ='teacher';
 
     protected $_table_columns=array(
         'id'=>array(
@@ -47,6 +47,11 @@ class Model_Teacher extends ORM {
         ),
         'predmet'=>array(
             'type'=>'varchar(45)',
+            'is_nullable'=>false
+
+        ),
+        'role'=>array(
+            'type'=>'varchar(25)',
             'is_nullable'=>false
 
         ),

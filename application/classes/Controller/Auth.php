@@ -10,6 +10,12 @@ class Controller_Auth extends Controller_System_Base  {
     }
 
     public function action_login() {
+
+       $this->redirect('admin');
+    }
+
+
+
 /*
         if(count($_POST)==0){
             $this->redirect(URL::base());
@@ -20,8 +26,8 @@ class Controller_Auth extends Controller_System_Base  {
             elseif($this->a2->allowed('userspage', 'index'))
                 $this->redirect('userspage');
             elseif($this->a2->allowed('userspage', 'index'))
-                $this->redirect('userspage');*/
-    }
+                $this->redirect('userspage');
+    }*/
     public  function action_logout(){
 
     }

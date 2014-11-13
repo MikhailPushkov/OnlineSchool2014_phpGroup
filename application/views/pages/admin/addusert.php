@@ -7,7 +7,8 @@ width: 500px;
 #commentForm label {
 width: 250px;
 }
-#commentForm label.error, #commentForm input.submit {
+#commentForm label.error,
+#commentForm input.submit {
 margin-left: 253px;
 }
 #signupForm {
@@ -92,44 +93,13 @@ margin-left: 103px;
 
 
 
-<div id="content">
-                          <div class="modal fade " id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                              <div id="" class="modal-dialog ">
-                                <div class="modal-content">
-                                         <div id="addingartic">
-                                                      <div class="span6">
-
-                                                          <div class="header">
-
-                                                            <h1>Предметы<h1>
-                                                           </div>
-                                                                <form class="form-horizontal" role="form">
-                                                                     <label class="align">Предмет <select id="styledSelect" name="artice" class="form-control right" style=" width: 46%;">
-                                                                                                      <option value="yourMom">ҷфаҷваҷва</option>
-                                                                                                      <option value="myMom">авпвапвап</option>
-                                                                                                    </select>
-                                                                    </label>
 
 
-
-                                                                    <div class="center">
-                                                                        <input type="submit"  name='rdbtn' class="buttonregistr" value="Выбрать">
-                                                                        <input type="button"  onclick="location.href='addusert'"  name='redirect' class="buttonregistr" value="Отмена">
-                                                                    </div>
-
-                                                                </form>
-                                                      </div>
-                                         </div>
-                                </div>
-                              </div>
-                          </div>
-                        </div>
-                     
                           <div class="container">
                              <div class="row">
                                <div id="admin_addus">
                                     <div class="span8">
-                                      <form class="form-horizontal" id="signupForm"  role="form">
+                                      <form class="form-horizontal"  method="post" action="addingusert" id="signupForm"  role="form">
 
                                            <label class="align">Логин  <input type="text" name="login" class="form-control right" id="login" placeholder=" "></label>
                                            <label class="align">Пароль  <input type="password" name="password" class="form-control right" id="password" placeholder=" "></label>
@@ -139,9 +109,18 @@ margin-left: 103px;
                                            <label class="align">Отчество <input type="text" name="o" class="form-control right" id="o" placeholder=" "></label>
                                            <label class="align">email  <input type="text" name="email" class="form-control right" id="email" placeholder=" "></label>
                                            <label class="align">Телефон  <input type="text" name="phone" class="form-control right"  placeholder=" "></label>
-                                           <label class="align">Предмет
-                                               <a href="#myModal"  role="button" data-toggle="modal"><img class="addphoto" src="<?php echo URL::base(); ?>./img/add.png"/></a>
-                                               <input type="text" name="predmet" class="form-control right" id="" placeholder=" "></label>
+                                          <label class="align">Предмет  <a href="#" id="myModalBtn" role="button" data-toggle="modal"><img class="addphoto" src="<?php echo URL::base(); ?>./img/add.png"/></a>
+                                              <table id="rodstv"  class="table" style="margin-left: auto;width: 200px;margin-top: -20px;">
+                                                  <thead>
+                                                  <td>Предмет</td><td hidden="true">ИД</td><td>Удалить</td></th>
+                                                  </thead>
+                                                  <tbody>
+                                                  <?php
+                                                  //foreach ($datas as $data)
+                                                  //echo '<tr><td>'.$data->fio.'</td><td hidden="true" class="id">'.$data->id.'</td><td>'.Form::button('delete', 'X', array('class'=>'btnDelete')).'</td></tr>'
+                                                  ?>
+                                                  </tbody>
+                                              </table></label>
 
                                           <div class="center">
                                               <input type="submit"  name='rdbtn' class="buttonregistr" value="Создать">
@@ -152,5 +131,18 @@ margin-left: 103px;
                                    </div>
                                 </div>
                               </div>
-                          </div>        
-                     
+                          </div>
+
+            <div id="content">
+                <div class="" hidden="true" id="myModal" tabindex="-1">
+
+
+                    <?php echo
+                        Form::open(NULL, array('class'=>'', 'id'=>'')).
+                        Form::label('lbl', 'Тип родства', array('class'=>'align')).
+                        Form::select('typereal', array('grandmo'=>'Информатика', 'grandpa'=>'Проекция','grandpa'=>'Информационные технологии'), NULL, array('class'=>'form-control right', 'id'=>'styledSelect')).
+                        Form::close();
+                    ?>
+
+                </div>
+            </div>

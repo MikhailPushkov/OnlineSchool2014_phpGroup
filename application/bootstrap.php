@@ -104,7 +104,7 @@ if (isset($_SERVER['KOHANA_ENV']))
  * - boolean  expose      set the X-Powered-By header                        FALSE
  */
 Kohana::init(array(
-	'base_url'   => '/kohana/',
+	'base_url'   => '/new/',
     'index_file' =>FALSE,
 
 ));
@@ -126,7 +126,7 @@ Kohana::modules(array(
 	 'A1'       => MODPATH.'A1',       // Basic authentication
      'A2'       => MODPATH.'A2',       // Basic authentication
      'ACL'       => MODPATH.'ACL',       // Basic authentication
-     //'auth'       => MODPATH.'auth',       // Basic authentication
+     'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	 'database'   => MODPATH.'database',   // Database access

@@ -43,27 +43,28 @@ abstract class Controller_System_Base extends Controller_Template {
         parent::before();
     }
 
-    public function after()
-    {
-        if (is_array($this->json) && count($this->json) > 0)
-        {
+    public function after() {
+    	if (is_array($this->json) && count($this->json) > 0) {
             $this->response->headers('Content-Type', 'application/json');
             $this->response->body(json_encode($this->json));
-        }
-        else {
-            $this->template->content = $this->content;
+        } else {
+        	$this->template->content = $this->content;
 
             $css = array(
-               'css/style.css',
-               'css/bootstrap.css',
-                'css/bootstrap-responsive.css'
+            		'/css/style.css',
+            		'/css/template.css',
+            		'/js/jquery-ui.min.css',
+            		'/js/jquery-ui.core.min.css',
+            		'/js/jquery-ui.theme.min.css',
+             		'css/bootstrap.css',
+             		'css/bootstrap-responsive.css'
             );
             $js = array(
-                '/js/jquery.min.js',
-                 //'/js/bootstrap.min.js',
                 '/js/jquery-1.11.1.js',
-                '/js/jquery.validate.js',
-                '/js/jquery.js',
+//                '/js/jquery.min.js',
+            	'/js/jquery-ui.min.js',
+                '/js/bootstrap.min.js',
+            	'/js/jquery.validate.js',
                 '/js/adduserp.js'
 
             );

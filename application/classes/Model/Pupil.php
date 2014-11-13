@@ -2,7 +2,7 @@
 
 class Model_Pupil extends ORM {
 
-    protected $_table_pupil ='pupil';
+    protected $_table_name ='pupil';
     protected $_table_columns=array(
         'id'=>array(
             'type'=>'int',
@@ -11,6 +11,11 @@ class Model_Pupil extends ORM {
         ),
         'login'=>array(
             'type'=>'varchar(55)',
+            'is_nullable'=>false
+
+        ),
+        'role'=>array(
+            'type'=>'varchar(30)',
             'is_nullable'=>false
 
         ),
@@ -51,6 +56,11 @@ class Model_Pupil extends ORM {
         ),
         'rodstv'=>array(
             'type'=>'varchar(25)',
+            'is_nullable'=>false
+
+        ),
+        'email'=>array(
+            'type'=>'varchar(45)',
             'is_nullable'=>false
 
         ),
