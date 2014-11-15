@@ -2,15 +2,14 @@
 
 class Model_Articles extends ORM {
 
-    protected $_table_article='articles';
-
+    protected $_table_name ='articles';
     protected $_table_columns=array(
         'id'=>array(
             'type'=>'int',
             'is_nullable'=>false
 
         ),
-        'artice'=>array(
+        'article'=>array(
             'type'=>'varchar(55)',
             'is_nullable'=>false
 

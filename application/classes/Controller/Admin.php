@@ -34,6 +34,13 @@ class Controller_Admin extends Controller_System_Base  {
         $this->txt ='Расписание для класса '  . $_POST['combo'];
         $this->content = View::factory('pages/rasp/rasp');
     }
+    public function action_addpredmet(){
+        if(isset($_POST)){
+            $model=ORM::factory('Articles')->values($_POST)->save();
+        }
+        $this->json['id'] = $model->id;
+        $this->json['article'] = $model->article;
+    }
     public  function action_addrealitv(){
 
         if(isset($_POST)){
@@ -41,6 +48,11 @@ class Controller_Admin extends Controller_System_Base  {
         }
         $this->json['id'] = $model->id;
         $this->json['fio'] = $model->familia.' '.$model->imya.' '.$model->otchestvo.' ('.$model->tiprodstv.')';
+    }
+    public function action_delpredmet(){
+        if(isset($_POST['id']))
+            $model=ORM::factory('Articles', $_POST['id'])->delete();
+        $this->json[] = "OK";
     }
     public function action_deleterealitv() {
     	if(isset($_POST['id']))

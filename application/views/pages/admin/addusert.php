@@ -109,8 +109,8 @@ margin-left: 103px;
                                            <label class="align">Отчество <input type="text" name="o" class="form-control right" id="o" placeholder=" "></label>
                                            <label class="align">email  <input type="text" name="email" class="form-control right" id="email" placeholder=" "></label>
                                            <label class="align">Телефон  <input type="text" name="phone" class="form-control right"  placeholder=" "></label>
-                                          <label class="align">Предмет  <a href="#" id="myModalBtn" role="button" data-toggle="modal"><img class="addphoto" src="<?php echo URL::base(); ?>./img/add.png"/></a>
-                                              <table id="rodstv"  class="table" style="margin-left: auto;width: 200px;margin-top: -20px;">
+                                          <label class="align">Предмет  <a href="#" id="BtnPred" role="button" data-toggle="modal"><img class="addphoto" src="<?php echo URL::base(); ?>./img/add.png"/></a>
+                                              <table id="predmet"  class="table" style="margin-left: auto;width: 200px;margin-top: -20px;">
                                                   <thead>
                                                   <td>Предмет</td><td hidden="true">ИД</td><td>Удалить</td></th>
                                                   </thead>
@@ -134,15 +134,20 @@ margin-left: 103px;
                           </div>
 
             <div id="content">
-                <div class="" hidden="true" id="myModal" tabindex="-1">
-
-
+                <div class="" hidden="true" id="myModalPred" tabindex="-1">
                     <?php echo
                         Form::open(NULL, array('class'=>'', 'id'=>'')).
-                        Form::label('lbl', 'Тип родства', array('class'=>'align')).
-                        Form::select('typereal', array('grandmo'=>'Информатика', 'grandpa'=>'Проекция','grandpa'=>'Информационные технологии'), NULL, array('class'=>'form-control right', 'id'=>'styledSelect')).
-                        Form::close();
-                    ?>
+                             Form::label('lbl', 'Предмет', array('class'=>'align'))?>
+                            <select class="form-control" onclick="document.getElementById('article').value=this.value;" size=1>
+                                        <option value="Информатика">Информатика</option>
+                                        <option value="Архитектура">Архитектура</option>
+                                        <option value="ИС">ИС</option>
+                                        <option value="Управление Данными">Управление Данными</option>
+                                        <option value="ТИПиС">ТИПиС</option>
+                                        <option value="Программирование">Программирование</option>
+                            </select>
+                             <input name="article" id="article" type = "hidden"  value = ""/>
+                      <?php  Form::close();?>
 
                 </div>
             </div>
