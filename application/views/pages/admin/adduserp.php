@@ -104,18 +104,18 @@
                                            <label class="align">Адрес  <input type="text" name="address" class="form-control right" id="address" placeholder=" " ></label>
                                            <label class="align">Класс  <input type="text" name="class" class="form-control right" id="class" placeholder=" " ></label>
                                            <label class="align">Дата рождения  <input type="date" name="datebirth" class="form-control right" id="datebirth" placeholder=" " ></label>
-                                           <label class="align">Родственник  <a href="#" id="myModalBtn" role="button" data-toggle="modal"><img class="addphotos" src="<?php echo URL::base(); ?>./img/add.png"/></a>
-                                           <table id="rodstv"  class="table" style="margin-left: auto;width: 200px;margin-top: -20px;">
+                                           <label class="align">Родственник  <a href="#" id="myModalBtn" role="button" data-toggle="modal"><img class="addphotos" src="<?php echo URL::base(); ?>./img/add.png"/></a></label>
+                                           <table id="rodstv"  class="table" style="margin-left: auto;width: 200px;margin-top: -47px;">
                                            	<thead>
                                            		<td>Родственник</td><td hidden="true">ИД</td><td>Удалить</td></th>
                                            	</thead>
                                            	<tbody>
-	                                           	<?php 
+	                                           	<?php
 	                                           		//foreach ($datas as $data)
 	                                           			//echo '<tr><td>'.$data->fio.'</td><td hidden="true" class="id">'.$data->id.'</td><td>'.Form::button('delete', 'X', array('class'=>'btnDelete')).'</td></tr>'
 	                                           	?>
-	                                        </tbody>                                           	
-                                           </table></label>
+	                                        </tbody>
+                                           </table>
                                           <div class="center">
                                               <input type="submit"  name='rdbtn' class="buttonregistr" value="Создать">
                                               <input type="button"  onclick="location.href='index'"  name='redirect' class="buttonregistr" value="Отмена">
@@ -130,17 +130,23 @@
 	                <?php echo 
 			    		Form::open(NULL, array('class'=>'', 'id'=>'')).
 		    			Form::label('lbl', 'Фамилия', array('class'=>'align')).
-		    			Form::input('f', NULL, array('class'=>'form-control ', 'id'=>'f', 'placeholder'=>' ', 'required'=>'')).
+		    			Form::input('familia', NULL, array('class'=>'form-control ', 'id'=>'familia', 'placeholder'=>' ', 'required'=>'')).
 		    			Form::label('lbl', 'Имя', array('class'=>'align')).
-		    			Form::input('i', NULL, array('class'=>'form-control ', 'id'=>'i', 'placeholder'=>' ', 'required'=>'')).
+		    			Form::input('imya', NULL, array('class'=>'form-control ', 'id'=>'imya', 'placeholder'=>' ', 'required'=>'')).
 		    			Form::label('lbl', 'Отчество', array('class'=>'align')).
-		    			Form::input('o', NULL, array('class'=>'form-control ', 'id'=>'o', 'placeholder'=>' ', 'required'=>'')).
+		    			Form::input('otchestvo', NULL, array('class'=>'form-control ', 'id'=>'otchestvo', 'placeholder'=>' ', 'required'=>'')).
 		    			Form::label('lbl', 'email', array('class'=>'align')).
-		    			Form::input('mail', NULL, array('class'=>'form-control ', 'id'=>'email', 'placeholder'=>' ', 'required'=>'')).
+		    			Form::input('email', NULL, array('class'=>'form-control ', 'id'=>'email', 'placeholder'=>' ', 'required'=>'')).
 		    			Form::label('lbl', 'Телефон', array('class'=>'align')).
 		    			Form::input('phone', NULL, array('class'=>'form-control ', 'id'=>'phone', 'placeholder'=>' ', 'required'=>'')).
 		    			Form::label('lbl', 'Тип родства', array('class'=>'align')).
-		    			Form::select('typereal', array('grandmo'=>'Бабушка', 'grandpa'=>'Дедушка','moth'=>'Мать','fath'=>'Отец'), NULL, array('class'=>'form-control ')).
+		    			Form::select('tiprodstv', array(
+                                                            'grandmo'=>'Бабушка',
+                                                            'grandpa'=>'Дедушка',
+                                                            'moth'=>'Мать',
+                                                            'fath'=>'Отец'
+                                                       ), NULL, array
+                        ('class'=>'form-control '), array('id' => 'tiprodstv')).
 		    			Form::close();
 		    		?>
                 </div>

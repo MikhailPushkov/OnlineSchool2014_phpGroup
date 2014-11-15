@@ -9,17 +9,17 @@ class Model_Realitive extends ORM {
             'is_nullable'=>false
 
         ),
-        'f'=>array(
+        'familia'=>array(
             'type'=>'varchar(45)',
             'is_nullable'=>false
 
         ),
-        'i'=>array(
+        'imya'=>array(
             'type'=>'varchar(45)',
             'is_nullable'=>false
 
         ),
-        'o'=>array(
+        'otchestvo'=>array(
             'type'=>'varchar(45)',
             'is_nullable'=>false
 
@@ -34,7 +34,7 @@ class Model_Realitive extends ORM {
             'is_nullable'=>false
 
         ),
-        'typereal'=>array(
+        'tiprodstv'=>array(
             'type'=>'varchar(45)',
             'is_nullable'=>false
 

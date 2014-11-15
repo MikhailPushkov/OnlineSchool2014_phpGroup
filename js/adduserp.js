@@ -20,12 +20,12 @@ $(document).ready(function(){
 				            async: false,
 				            dataType: "json",
 				            data: {
-				                f: $("#f").val(),
-				                i: $("#i").val(),
-				                o: $("#o").val(),
-				                mail: $("#email").val(),
+                                familia: $("#familia").val(),
+                                imya: $("#imya").val(),
+                                otchestvo: $("#otchestvo").val(),
+				                email: $("#email").val(),
 				                phone: $("#phone").val(),
-				                typereal: $("#typereal").val()
+                                tiprodstv: $("#tiprodstv").val()
 				            },
 				            success: function(data, textStatus, jqXHR){
 				                $("#rodstv").append("<tr><td>"+data["fio"]+"</td><td hidden=\"true\" class=\"id\">"+data["id"]+"</td><td><button class=\"btnDelete\" name=\"delete\">X</button></td></tr>");
@@ -45,12 +45,12 @@ $(document).ready(function(){
 				}
 			}]
 		});
-    	$("#f").val("");
-        $("#i").val("");
-        $("#o").val("");
+    	$("#familia").val("");
+        $("#imya").val("");
+        $("#otchestvo").val("");
         $("#email").val("");
         $("#phone").val("");
-        $("#typereal").val("");
+        $("#tiprodstv").val("");
 		return false; // Предотвращаем срабатывание ссылки
 	});
 	
@@ -65,7 +65,7 @@ $(document).ready(function(){
                 "id": $current.find(".id").text()
             },
             success: function(data, textStatus, jqXHR){
-        		$current.remove();
+        		$current.remove('tr');
             },
             error: function(jqXHR, textStatus, errorThrown){
             	alert("Произошла ошибка: " + errorThrown);

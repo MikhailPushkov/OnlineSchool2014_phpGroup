@@ -35,12 +35,12 @@ class Controller_Admin extends Controller_System_Base  {
         $this->content = View::factory('pages/rasp/rasp');
     }
     public  function action_addrealitv(){
+
         if(isset($_POST)){
             $model=ORM::factory('Realitive')->values($_POST)->save();
         }
         $this->json['id'] = $model->id;
-        $this->json['fio'] = $model->f.' '.$model->i.' '.$model->o.' ('.$model->typereal.')';
-
+        $this->json['fio'] = $model->familia.' '.$model->imya.' '.$model->otchestvo.' ('.$model->tiprodstv.')';
     }
     public function action_deleterealitv() {
     	if(isset($_POST['id']))
