@@ -95,7 +95,6 @@ class Controller_Admin extends Controller_System_Base  {
     public function action_addingusert(){
 
         if(isset($_POST)){
-
             $realitive=ORM::factory('Teacher')->values($_POST);
             $realitive->role='Учитель';
             $realitive->save();

@@ -139,14 +139,18 @@
 		    			Form::input('email', NULL, array('class'=>'form-control ', 'id'=>'email', 'placeholder'=>' ', 'required'=>'')).
 		    			Form::label('lbl', 'Телефон', array('class'=>'align')).
 		    			Form::input('phone', NULL, array('class'=>'form-control ', 'id'=>'phone', 'placeholder'=>' ', 'required'=>'')).
-		    			Form::label('lbl', 'Тип родства', array('class'=>'align')).
-		    			Form::select('tiprodstv', array(
-                                                            'grandmo'=>'Бабушка',
-                                                            'grandpa'=>'Дедушка',
-                                                            'moth'=>'Мать',
-                                                            'fath'=>'Отец'
-                                                       ), NULL, array
-                        ('class'=>'form-control '), array('id' => 'tiprodstv')).
-		    			Form::close();
+		    			Form::label('lbl', 'Тип родства', array('class'=>'align'))?>
+                            <select class="form-control" onclick="document.getElementById('tiprodstv').value=this.value;" size=1>
+                                <option value="Отец">Отец</option>
+                                <option value="Мать">Мать</option>
+                                <option value="Бабушка">Бабушка</option>
+                                <option value="Дедушка">Дедушка</option>
+                                <option value="Брат">Брат</option>
+                                <option value="Сестра">Сестра</option>
+                                <option value="Тетя">Тетя</option>
+                                <option value="Дядя">Дядя</option>
+                            </select>
+                             <input name="tiprodstv" id="tiprodstv" type = "hidden"  value = ""/>
+		    			<?php Form::close();
 		    		?>
                 </div>
