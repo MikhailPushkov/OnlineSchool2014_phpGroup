@@ -25,7 +25,7 @@ img {
     padding: 0;
 }
 #containter {
-    background: none repeat scroll 0 0 #ADD8E6;
+    background: none repeat scroll 0 0 #BADCD7;
     height: auto !important;
     margin: 0 auto;
     max-width: 1300px;
@@ -322,13 +322,12 @@ input:focus:invalid {
     margin-left: -14px;
     width  : 100%;
     padding: 0;
-
     color: red;
     border-radius: 0 0 5px 5px;
     padding: 0.3em;
 }
 #cell{
-    size: 5px !important;
+
     padding: 0;
     width: 70px;
     height: 30px;
@@ -342,7 +341,6 @@ input:focus:invalid {
     text-align: center;
 }
 .buttonadd{
-    size: 10;
     margin:0 auto;
 }
 #btnR{
@@ -350,4 +348,39 @@ input:focus:invalid {
 }
 #btnL{
     float: left;
+}
+#profil_right{
+
+}
+
+#profil_right .center{
+    text-align: center;
+    margin-top: 120px;
+}
+#profil_right .btncenter{
+    margin-bottom: 50px;
+}
+
+#profil_left{
+    margin-left: 70px !important;
+    display: block;
+}
+
+#profil_left .center{
+    float: left;
+    width: 450px;
+    min-height: 430px;
+    background: #BADCD7 !important;
+    border-top-style: inset;
+    border-top-right-radius: 46px;
+    border-right-style: outset;
+}
+#profil_left .inform{
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+#profil_left .btninform{
+    margin-top: 30px;
+    margin-left: -40px;
 }

@@ -3,10 +3,11 @@
 class Controller_Pupil extends Controller_System_Base  {
 
 
-    public function action_index($id)
+    public function action_index()
     {
-        $post = ORM::factory('pupil')->find($id);
-        $post->update();
+        $this->title = 'Страница ученика';
+        $this->txt = 'Профиль ученика';
+        $this->content = View::factory('pages/userp/main_page');
     }
 
 } // End Welcome
