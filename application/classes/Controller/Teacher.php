@@ -2,7 +2,6 @@
 
 class Controller_Teacher extends Controller_System_Base  {
 
-
     public function action_index()
     {
         $this->title = 'Страница учителя';

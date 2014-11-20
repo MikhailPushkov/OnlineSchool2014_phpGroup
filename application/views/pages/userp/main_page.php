@@ -27,6 +27,13 @@
                     </div>
              </div>
         <div id ='profil_right'>
+            <p><a href="http://localhost/new/pupil" style="
+    color: #005580 !important;
+    font-size: 25px bold;
+
+
+"  >Перейти на страницу админа</a></p>
+
             <div class="center">
 
                         <div class="btncenter">

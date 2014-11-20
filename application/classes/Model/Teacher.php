@@ -50,8 +50,13 @@ class Model_Teacher extends ORM {
             'is_nullable'=>false
 
         ),
-        'role'=>array(
+        'table_role'=>array(
             'type'=>'varchar(25)',
+            'is_nullable'=>false
+
+        ),
+        'role'=>array(
+            'type'=>'varchar(20)',
             'is_nullable'=>false
 
         ),

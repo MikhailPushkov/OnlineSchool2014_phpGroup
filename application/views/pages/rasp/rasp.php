@@ -39,12 +39,12 @@
                     </tr>
                     <tr>
                         <td rowspan="2"/*Обьединяем 2 ячейки по вертикали*/>Время урока</td>
-                        <td colspan="2" style="width: 50px;">Пн, дд.мм.гггг</td>
-                        <td colspan="2">Вт, дд.мм.гггг</td>
-                        <td colspan="2">Ср, дд.мм.гггг</td>
-                        <td colspan="2">Чт, дд.мм.гггг</td>
-                        <td colspan="2">Пт, дд.мм.гггг</td>
-                        <td colspan="2">Сб, дд.мм.гггг</td>
+                        <td colspan="2" style="width: 50px;">Пн,</td>
+                        <td colspan="2">Вт, </td>
+                        <td colspan="2">Ср, </td>
+                        <td colspan="2">Чт, </td>
+                        <td colspan="2">Пт, </td>
+                        <td colspan="2">Сб, </td>
 
                     </tr>
                     <tr id = "thirdTr">
@@ -52,7 +52,7 @@
                     var thirdTr = document.getElementById("thirdTr");/*Получаем обьект 3ей строки и добавляем в него хтмл*/
                     for(var i = 0; i !=6; i++)
                     {
-                        thirdTr.innerHTML += "<td>Предмет</td><td>Учитель</td>";
+                        thirdTr.innerHTML += "<td>Предмет</td>";
                     }
                     var arr = ["08:00 - 08:45","09:30 - 11:25","09:30 - 11:15","11:40 - 13:15","13:30 - 15:05","15:20 - 16:55","17:10 - 18:45"];
                     var mainTb = document.getElementById("mainTb")/*Получаем обьект таблицы*/

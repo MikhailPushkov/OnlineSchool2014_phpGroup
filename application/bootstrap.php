@@ -126,7 +126,8 @@ Kohana::modules(array(
 	 'A1'       => MODPATH.'A1',       // Basic authentication
      'A2'       => MODPATH.'A2',       // Basic authentication
      'ACL'       => MODPATH.'ACL',       // Basic authentication
-     'auth'       => MODPATH.'auth',       // Basic authentication
+    'message'	=> MODPATH.'message', //Message
+     //'auth'       => MODPATH.'auth',       // Basic authentication
 	// 'cache'      => MODPATH.'cache',      // Caching with multiple backends
 	// 'codebench'  => MODPATH.'codebench',  // Benchmarking tool
 	 'database'   => MODPATH.'database',   // Database access

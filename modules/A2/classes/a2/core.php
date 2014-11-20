@@ -30,7 +30,7 @@
  *
  */
 
-abstract class A2_Core extends Acl {
+abstract class A2_Core extends ACL {
 
 	/**
 	 * Config object

@@ -11,12 +11,12 @@
                                                   ">
                         <div class="centered">
 
-                              <form role="form"  action="admin" name="form" method="post" >
+                              <form role="form"  action="auth/login" name="form" method="post" >
                                   <h3  style="text-align: center;">Авторизация</h3>
 
                                       <div class="form-group">
                                             <label for="exampleInputEmail1">Логин</label>
-                                            <input type="text" name="email_address" class="form-control" id="exampleInputEmail1" style="width:95%;" >
+                                            <input type="text" name="username" class="form-control" id="exampleInputEmail1" style="width:95%;" >
                                       </div>
                                       <div class="form-group">
                                         <label for="exampleInputPassword1">Пароль</label>

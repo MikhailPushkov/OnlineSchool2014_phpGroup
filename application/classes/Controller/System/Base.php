@@ -7,7 +7,7 @@ abstract class Controller_System_Base extends Controller_Template {
      */
    protected $a2;
     /**
-     * @var
+     * @var A1
      */
     protected $a1;
     protected $user;
@@ -15,7 +15,11 @@ abstract class Controller_System_Base extends Controller_Template {
      * @var ACL
      */
     protected $acl;
-    protected $auth;
+    /**
+     * @var Session
+     */
+    protected $session;
+
     protected $content='';
     protected $css=array();
     protected $js =array();
@@ -24,23 +28,22 @@ abstract class Controller_System_Base extends Controller_Template {
     protected $json = array();
 
     public function before(){
+    	
+    	/*
+         $this->a2 = A2::instance(); // Создается экземпляр класса аутентификации и  авторизации
+         $this->a1 = $this->a2->auth(); // Получаем ссҷлку на объект аутенификақии
+         $this->user = $this->a1->get_user();
+         if (!$this->a1->logged_in() && (strtolower($this->request->controller()) != 'auth')) {
+         	Message::error('Для доступа к системе необходима авторизация.');
+         	$this->redirect('auth');
+         }
 
-/*
-        $this->a2 = A2::instance();
-        $this->user = $this->a2->get_user();
-
-        $this->a2->all
-        if (!$this->a2->allowed($this->request->controller(''),$this->request->action(''))) {
-            throw new HTTP_Exception_404('Доступ запрещен');
-        }*/
-      /*  $auth =Auth::instance();
-
-        if($auth->logged_in()){
-            Request::initial()->redirect();
-        }*/
-        $this->template = 'layouts/main';
-
-        parent::before();
+         /*if (!$this->a2->allowed($this->request->controller(''),$this->request->action(''))) {
+         	throw new HTTP_Exception_404('Доступ запрещен');
+         }*/
+          
+         $this->template = 'layouts/main';
+         parent::before();
     }
 
     public function after() {

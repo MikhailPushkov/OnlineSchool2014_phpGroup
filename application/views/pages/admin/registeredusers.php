@@ -1,14 +1,16 @@
 <script>
     $(function() {
-        $( "#dialog-1" ).dialog({
-            autoOpen: false
+        $( "#dialog-2" ).dialog({
+            autoOpen: false,
+            hide: "size",
+            show : "slide"
         });
-        $( "#openerred" ).click(function() {
-            $( "#dialog-1" ).dialog( "open" );
+        $( "#opener" ).click(function() {
+            $( "#dialog-2" ).dialog( "open" );
         });
     });
 </script>
-<div id="dialog-1" class="registeredusers"  role="dialog" title="Добавить нового пользователя">
+<div id="dialog-2" class="registeredusers"  role="dialog" title="Добавить нового пользователя">
 
     <form  role="form" method="post" action="addingus" name="form">
 
@@ -35,6 +37,12 @@
 
                     <button id="opener" style="
                    width: 20% !important;margin-left: 7%; background-color: #ffffff !important;" class="buttonregistr">Добавить</button>
+                    <a href="http://localhost/new/admin/" id="" style="
+    color: #005580 !important;
+    font-size: 25px bold;
+    float: right;
+" >Перейти на главную страницу админа</a>
+
 
                     <label class="align" style="margin-top: 20px;">Поиск:  <input type="search" style="width: 30%;"  class="form-control right" id="" placeholder=" "></label>
                     <table class="table table-bordered table-hover tableregistered">
@@ -56,8 +64,8 @@
                                 <th><?php echo $item['f']; ?></th>
                                 <th><?php echo $item['i']; ?></th>
                                 <th><?php echo $item['o']; ?></th>
-                                <th><?php echo $item['role']; ?></th>
-                                <th><a href="<?php echo URL::base(); ?>admin/delusers/<?php echo $item['id'];?>"><img src="<?php echo URL::base(); ?>./img/edit.png"></a></th>
+                                <th><?php echo $item['table_role']; ?></th>
+                                <th><a href="<?php echo URL::base(); ?>admin/edit/<?php echo $item['id'];?>"><img src="<?php echo URL::base(); ?>./img/edit.png"></a></th>
                                 <th><a href="<?php echo URL::base(); ?>admin/delusers/<?php echo $item['id'];?>"><img src="<?php echo URL::base(); ?>./img/del.png"></a></th>
                             </tr>
                         <?php endforeach; ?>

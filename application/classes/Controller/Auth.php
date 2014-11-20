@@ -10,24 +10,24 @@ class Controller_Auth extends Controller_System_Base  {
     }
 
     public function action_login() {
-
-       $this->redirect('admin');
-    }
-
-
-
-/*
-        if(count($_POST)==0){
-            $this->redirect(URL::base());
+        $this->redirect('admin');
+       /* if(count($_POST)==0) {
+        	Message::error('Неверно введен логин или пароль! Повторите попытку ввода.');
+        	return;
         }
-        $this->a1->login($_POST['username'],$_POST['password']);
-            if($this->a2->allowed('admin', 'index'))
-                $this->redirect('admin');
-            elseif($this->a2->allowed('userspage', 'index'))
-                $this->redirect('userspage');
-            elseif($this->a2->allowed('userspage', 'index'))
-                $this->redirect('userspage');
-    }*/
+        $this->user = $this->a1->login($_POST['username'],$_POST['password']);
+        if (!$this->user) {
+        	Message::error('Неверно введен логин или пароль! Повторите попытку ввода.');
+        } else {
+	        if($this->a2->allowed('admin', 'index'))
+	            $this->redirect('admin');
+	        elseif($this->a2->allowed('userspage', 'index'))
+	            $this->redirect('userspage');
+	        elseif($this->a2->allowed('userspage', 'index'))
+	            $this->redirect('userspage');
+        }
+        $this->redirect('auth');*/
+    }
     public  function action_logout(){
 
     }

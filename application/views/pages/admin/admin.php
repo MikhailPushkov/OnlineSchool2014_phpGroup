@@ -2,7 +2,9 @@
                     <script>
                         $(function() {
                             $( "#dialog-1" ).dialog({
-                                autoOpen: false
+                                autoOpen: false,
+                                hide: "size",
+                                show : "slide"
                             });
                             $( "#openerred" ).click(function() {
                                 $( "#dialog-1" ).dialog( "open" );
@@ -11,7 +13,7 @@
                     </script>
                     <div id="dialog-1" class="registeredusers"  role="dialog" title="Добавить нового пользователя">
 
-                        <form  role="form" method="post" action="admin/addingus" name="form">
+                        <form  role="form" method="post" action="addingus" name="form">
 
                             <div id="registeruser">
                                 <div id="cbxuregister">
@@ -42,7 +44,7 @@
 
                     <!-- HTML -->
                     <div id="dialog-3" title="Добавить расписание для класса">
-                        <form  role="form" method="post" action="admin/rasp" name="form">
+                        <form  role="form" method="post" action="rasp" name="form">
 
                             <div id="addrasp">
 
@@ -75,6 +77,18 @@
                                   <a href="#" id="openerred"  role="button"><li>Регистрация нового пользователя</li></a>
 
                                   <a href="admin/regusers" ><li> Зарегистрированные пользователи</li></a>
+
+                                 <br><p style="font-size: 12px !important;">Для проверки заказчика(страница учника и учителя есть)</p>
+                                  <p><a href="http://localhost/new/pupil" style="
+    color: #005580 !important;
+    font-size: 25px bold;
+
+"  >Перейти на страницу ученика</a></p>
+                                 <p><a href="http://localhost/new/teacher " style="
+    color: #005580 !important;
+    font-size: 25px bold;
+
+" >Перейти на страницу учителя</a></p>
                               </ul>
 
                           </div>

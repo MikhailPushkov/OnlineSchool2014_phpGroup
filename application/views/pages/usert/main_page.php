@@ -8,7 +8,7 @@
 
                 <div class="inform">
                     <p>
-                        <img src="<?php echo URL::base(); ?>/img/passport.jpg" class="img-rounded">
+                        <img src="http://test-online.besaba.com/img/passport.jpg" class="img-rounded">
                     </p>
                     <p>
                     <h5>Фамилия</h5>
@@ -27,6 +27,12 @@
             </div>
         </div>
         <div id ='profil_right'>
+            <p><a href="http://localhost/new/pupil" style="
+    color: #005580 !important;
+    font-size: 25px bold;
+
+
+"  >Перейти на страницу админа</a></p>
             <div class="center">
 
                 <div class="btncenter">

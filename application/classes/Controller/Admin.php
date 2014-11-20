@@ -79,15 +79,15 @@ class Controller_Admin extends Controller_System_Base  {
             $model=ORM::factory('Teacher',$ss)->delete();
         }
 
-        $this->action_regusers();
+        $this->redirect('admin/regusers');
     }
     public  function  action_regusers(){
 
         $this->txt = 'Управление учетными записями';
 
-        $query='(Select id,email,login,f,i,o,role from pupil)
+        $query='(Select id,email,login,f,i,o,table_role from pupil)
                 UNION
-                (Select id,email,login,f,i,o,role from teacher)
+                (Select id,email,login,f,i,o,table_role from teacher)
                 Order by f
                 ';
         $data=DB::query(Database::SELECT,$query)->execute();
@@ -99,21 +99,55 @@ class Controller_Admin extends Controller_System_Base  {
 
         if(isset($_POST)){
             $realitive=ORM::factory('Pupil')->values($_POST);
-            $realitive->role='Ученик';
+            $realitive->table_role='Ученик';
             $realitive->save();
         }
-        $this->action_regusers();
+        $this->redirect('admin/regusers');
     }
     public function action_addingusert(){
 
         if(isset($_POST)){
             $realitive=ORM::factory('Teacher')->values($_POST);
-            $realitive->role='Учитель';
+            $realitive->table_role='Учитель';
             $realitive->save();
         }
         $this->redirect('admin/regusers');
     }
     public function action_delusreg(){
 
+    }
+    public function action_edit(){
+        $ss=$this->request->param('id');
+
+        $model=ORM::factory('Pupil',$ss);
+
+        if($model->loaded()){
+
+            $this->txt = 'Учетные записи';
+            $this->content = View::factory('pages/admin/updateuserp')->bind('data',$model);
+        }
+        else{
+            $model=ORM::factory('Teacher',$ss);
+            $this->txt = 'Учетные записи';
+            $this->content = View::factory('pages/admin/updateusert')->bind('data',$model);
+        }
+
+    }
+    public  function action_upuserp(){
+
+        $ss=$this->request->param('id');
+        if(isset($_POST)) {
+            $model = ORM::factory('Pupil')->find($ss)->values($_POST)->save();
+        }
+        $this->redirect('admin/regusers');
+    }
+    public function action_upusert(){
+
+        $ss=$this->request->param('id');
+
+        if(isset($_POST)) {
+            $model = ORM::factory('Teacher')->find($ss)->values($_POST)->save();
+        }
+        $this->redirect('admin/regusers');
     }
 } // End Welcome

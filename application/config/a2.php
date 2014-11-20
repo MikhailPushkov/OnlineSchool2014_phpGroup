@@ -26,7 +26,7 @@ return array(
 	/**
 	 * Exception class to throw when authorization fails (eg 'HTTP_Exception_401')
 	 */
-	'exception_type' => 'a2_exception',
+	'exception_type' => 'A2_Exception',
 
 	/*
 	 * The ACL Roles (String IDs are fine, use of ACL_Role_Interface objects also possible)

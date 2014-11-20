@@ -384,3 +384,8 @@ input:focus:invalid {
     margin-top: 30px;
     margin-left: -40px;
 }
+
+.eror_mes_auth {
+    text-align: center;
+
+}

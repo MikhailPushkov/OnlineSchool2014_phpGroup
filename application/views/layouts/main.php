@@ -21,6 +21,9 @@
 <div id ="container">
     <div id="header"><?php echo $header; ?></div>
     <div id="content"><?php echo $content;?></div>
+    <div   class="eror_mes_auth">
+            <?php  echo Message::display(); ?>
+    </div>
     <div class="container">
         <div class="span12">
 
