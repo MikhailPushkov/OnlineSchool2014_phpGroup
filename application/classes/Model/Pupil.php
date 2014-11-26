@@ -9,7 +9,7 @@ class Model_Pupil extends ORM {
             'is_nullable'=>false
 
         ),
-        'login'=>array(
+        'username'=>array(
             'type'=>'varchar(55)',
             'is_nullable'=>false
 

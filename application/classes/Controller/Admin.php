@@ -6,6 +6,7 @@ class Controller_Admin extends Controller_System_Base  {
 
         $this->title = 'Страница админа';
         $this->txt = 'Учетные записи';
+        $this->logout='<input type="submit" style=" float: right;  margin: -16px -85px"  class="buttonregistr" value="Выйти">';
         $this->content = View::factory('pages/admin/admin');
     }
     public function action_addusert(){
@@ -85,9 +86,9 @@ class Controller_Admin extends Controller_System_Base  {
 
         $this->txt = 'Управление учетными записями';
 
-        $query='(Select id,email,login,f,i,o,table_role from pupil)
+        $query='(Select id,email,username,f,i,o,table_role from pupil)
                 UNION
-                (Select id,email,login,f,i,o,table_role from teacher)
+                (Select id,email,username,f,i,o,table_role from teacher)
                 Order by f
                 ';
         $data=DB::query(Database::SELECT,$query)->execute();
@@ -98,8 +99,10 @@ class Controller_Admin extends Controller_System_Base  {
     public function action_addinguserp(){
 
         if(isset($_POST)){
+            $_POST['password'] = $this->a1->hash($_POST['password']);
             $realitive=ORM::factory('Pupil')->values($_POST);
             $realitive->table_role='Ученик';
+            $realitive->role='pupil';
             $realitive->save();
         }
         $this->redirect('admin/regusers');
@@ -107,8 +110,10 @@ class Controller_Admin extends Controller_System_Base  {
     public function action_addingusert(){
 
         if(isset($_POST)){
+            $_POST['password'] = $this->a1->hash($_POST['password']);
             $realitive=ORM::factory('Teacher')->values($_POST);
             $realitive->table_role='Учитель';
+            $realitive->role='teacher';
             $realitive->save();
         }
         $this->redirect('admin/regusers');
@@ -137,6 +142,7 @@ class Controller_Admin extends Controller_System_Base  {
 
         $ss=$this->request->param('id');
         if(isset($_POST)) {
+            $_POST['password'] = $this->a1->hash($_POST['password']);
             $model = ORM::factory('Pupil')->find($ss)->values($_POST)->save();
         }
         $this->redirect('admin/regusers');
@@ -146,6 +152,7 @@ class Controller_Admin extends Controller_System_Base  {
         $ss=$this->request->param('id');
 
         if(isset($_POST)) {
+            $_POST['password'] = $this->a1->hash($_POST['password']);
             $model = ORM::factory('Teacher')->find($ss)->values($_POST)->save();
         }
         $this->redirect('admin/regusers');

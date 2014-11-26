@@ -19,17 +19,14 @@ abstract class Controller_System_Base extends Controller_Template {
      * @var Session
      */
     protected $session;
-
     protected $content='';
     protected $css=array();
     protected $js =array();
     protected $title='';
     protected $txt='';
+    protected $logout;
     protected $json = array();
-
     public function before(){
-    	
-    	/*
          $this->a2 = A2::instance(); // Создается экземпляр класса аутентификации и  авторизации
          $this->a1 = $this->a2->auth(); // Получаем ссҷлку на объект аутенификақии
          $this->user = $this->a1->get_user();
@@ -37,8 +34,7 @@ abstract class Controller_System_Base extends Controller_Template {
          	Message::error('Для доступа к системе необходима авторизация.');
          	$this->redirect('auth');
          }
-
-         /*if (!$this->a2->allowed($this->request->controller(''),$this->request->action(''))) {
+       /*if (!$this->a2->allowed($this->request->controller(''),$this->request->action(''))) {
          	throw new HTTP_Exception_404('Доступ запрещен');
          }*/
           
@@ -71,11 +67,10 @@ abstract class Controller_System_Base extends Controller_Template {
                 '/js/adduserp.js'
 
             );
-
             $this->template->css = Arr::merge($css, $this->css);
             $this->template->js = Arr::merge($js, $this->js);
             $this->template->title = $this->title;
-            $this->template->header = View::factory('layouts/header')->bind('txt', $this->txt);
+            $this->template->header = View::factory('layouts/header')->bind('txt', $this->txt)->bind('logout',$this->logout);
             $this->template->footer = View::factory('layouts/footer');
 
             parent::after();

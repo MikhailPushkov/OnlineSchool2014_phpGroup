@@ -96,7 +96,7 @@
             <div class="span10">
                 <form class="form-horizontal"  action="http://localhost/new/admin/upuserp"  method="post" id="signupForm" role="form">
                      <input type="hidden" name="id" value="<?php echo $data->id;?>"/>
-                    <label class="align">Логин  <input type="text" name="login" value="<?php echo $data->login; ?>" class="form-control right" id="login" placeholder=" " ></label>
+                    <label class="align">Логин  <input type="text" name="username" value="<?php echo $data->username; ?>" class="form-control right" id="username" placeholder=" " ></label>
                     <label class="align">Пароль  <input type="password" name="password" value="<?php echo $data->password; ?>" class="form-control right" id="password" placeholder=" " ></label>
                     <label class="align">Подтвердите пароль  <input type="password" value="" name="confirm_password" class="form-control right" id="disabledInput" placeholder=" " ></label>
                     <label class="align">Фамилия   <input type="text" name="f" value="<?php echo $data->f; ?>" class="form-control right" id="f" placeholder=" " ></label>
@@ -112,8 +112,8 @@
                         </thead>
                         <tbody>
                         <?php
-                        //foreach ($datas as $data)
-                        //echo '<tr><td>'.$data->fio.'</td><td hidden="true" class="id">'.$data->id.'</td><td>'.Form::button('delete', 'X', array('class'=>'btnDelete')).'</td></tr>'
+                        foreach ($data as $data)
+                        echo '<tr><td>'.$data->fio.'</td><td hidden="true" class="id">'.$data->id.'</td><td>'.Form::button('delete', 'X', array('class'=>'btnDelete')).'</td></tr>'
                         ?>
                         </tbody>
                     </table>

@@ -150,3 +150,20 @@
 #5 C:\wamp\www\new\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
 #6 C:\wamp\www\new\index.php(118): Kohana_Request->execute()
 #7 {main} in C:\wamp\www\new\application\classes\Controller\Admin.php:34
+2014-11-20 22:54:24 --- CRITICAL: ErrorException [ 8 ]: Undefined variable: datas ~ APPPATH\views\pages\admin\updateuserp.php [ 115 ] in C:\wamp\www\new\application\views\pages\admin\updateuserp.php:115
+2014-11-20 22:54:24 --- DEBUG: #0 C:\wamp\www\new\application\views\pages\admin\updateuserp.php(115): Kohana_Core::error_handler(8, 'Undefined varia...', 'C:\\wamp\\www\\new...', 115, Array)
+#1 C:\wamp\www\new\system\classes\Kohana\View.php(61): include('C:\\wamp\\www\\new...')
+#2 C:\wamp\www\new\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\\wamp\\www\\new...', Array)
+#3 C:\wamp\www\new\system\classes\Kohana\View.php(228): Kohana_View->render()
+#4 C:\wamp\www\new\application\views\layouts\main.php(23): Kohana_View->__toString()
+#5 C:\wamp\www\new\system\classes\Kohana\View.php(61): include('C:\\wamp\\www\\new...')
+#6 C:\wamp\www\new\system\classes\Kohana\View.php(348): Kohana_View::capture('C:\\wamp\\www\\new...', Array)
+#7 C:\wamp\www\new\system\classes\Kohana\Controller\Template.php(44): Kohana_View->render()
+#8 C:\wamp\www\new\application\classes\Controller\System\Base.php(81): Kohana_Controller_Template->after()
+#9 C:\wamp\www\new\system\classes\Kohana\Controller.php(87): Controller_System_Base->after()
+#10 [internal function]: Kohana_Controller->execute()
+#11 C:\wamp\www\new\system\classes\Kohana\Request\Client\Internal.php(97): ReflectionMethod->invoke(Object(Controller_Admin))
+#12 C:\wamp\www\new\system\classes\Kohana\Request\Client.php(114): Kohana_Request_Client_Internal->execute_request(Object(Request), Object(Response))
+#13 C:\wamp\www\new\system\classes\Kohana\Request.php(986): Kohana_Request_Client->execute(Object(Request))
+#14 C:\wamp\www\new\index.php(118): Kohana_Request->execute()
+#15 {main} in C:\wamp\www\new\application\views\pages\admin\updateuserp.php:115

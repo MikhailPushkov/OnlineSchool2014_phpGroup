@@ -73,20 +73,9 @@
                 email: "Please enter a valid email address",
                 datebirth:{required:'kalaparida'},
                 address:{required:'ajina'},
-                login:{required:'asdasdasdasdasdasdasd'}
+                username:{required:'asdasdasdasdasdasdasd'}
             }
         });
-
-        // propose username by combining first- and lastname
-        $("#i").focus(function() {
-            var f = $("#f").val();
-            var o = $("#o").val();
-            if (f && o && !this.value) {
-                this.value = f + "." + o;
-            }
-        });
-
-        //code to hide topic selection, disable for demo
     });
 </script>
 
@@ -95,7 +84,7 @@
                                     <div id="admin_addus">
                                     <div class="span10">
                                       <form class="form-horizontal"  action="addinguserp"  method="post" id="signupForm" role="form">
-                                           <label class="align">Логин  <input type="text" name="login" class="form-control right" id="login" placeholder=" "></label>
+                                           <label class="align">Логин  <input type="text" name="username" class="form-control right" id="username" placeholder=" "></label>
                                            <label class="align">Пароль  <input type="password" name="password" class="form-control right" id="password" placeholder=" " ></label>
                                            <label class="align">Подтвердите пароль  <input type="password" name="confirm_password" class="form-control right" id="confirm_password" placeholder=" " ></label>
                                            <label class="align">Фамилия   <input type="text" name="f" class="form-control right" id="f" placeholder=" " ></label>

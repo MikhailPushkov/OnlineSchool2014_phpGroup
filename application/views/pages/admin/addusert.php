@@ -101,7 +101,7 @@ margin-left: 103px;
                                     <div class="span8">
                                       <form class="form-horizontal"  method="post" action="addingusert" id="signupForm"  role="form">
 
-                                           <label class="align">Логин  <input type="text" name="login" class="form-control right" id="login" placeholder=" "></label>
+                                           <label class="align">Логин  <input type="text" name="username" class="form-control right" id="username" placeholder=" "></label>
                                            <label class="align">Пароль  <input type="password" name="password" class="form-control right" id="password" placeholder=" "></label>
                                            <label class="align">Подтвердите пароль  <input type="password"  name="confirm_password" class="form-control right" id="confirm_password" placeholder=" "></label>
                                            <label class="align">Фамилия   <input type="text" name="f"  class="form-control right" id="f" placeholder=" "></label>

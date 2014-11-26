@@ -101,7 +101,7 @@
             <div class="span8">
                 <form class="form-horizontal"  method="post" action="http://localhost/new/admin/upusert" id="signupForm"  role="form">
                     <input type="hidden" name="id" value="<?php echo $data->id;?>"/>
-                    <label class="align">Логин  <input type="text" value="<?php echo $data->login; ?>" name="login" class="form-control right" id="login" placeholder=" "></label>
+                    <label class="align">Логин  <input type="text" value="<?php echo $data->username; ?>" name="username" class="form-control right" id="username" placeholder=" "></label>
                     <label class="align">Пароль  <input type="password" value="<?php echo $data->password; ?>" name="password" class="form-control right" id="password" placeholder=" "></label>
                     <label class="align">Подтвердите пароль  <input type="password" value="" name="disabledInput" class="form-control right" id="confirm_password" placeholder=" "></label>
                     <label class="align">Фамилия   <input type="text" name="f" value="<?php echo $data->f; ?>"  class="form-control right" id="f" placeholder=" "></label>

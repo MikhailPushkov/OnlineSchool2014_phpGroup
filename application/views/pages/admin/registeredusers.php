@@ -59,7 +59,7 @@
                         </tr>
                         <?php foreach($data as $item):?>
                             <tr>
-                                <th><?php echo $item['login']; ?></th>
+                                <th><?php echo $item['username']; ?></th>
                                 <th><?php echo $item['email']; ?></th>
                                 <th><?php echo $item['f']; ?></th>
                                 <th><?php echo $item['i']; ?></th>

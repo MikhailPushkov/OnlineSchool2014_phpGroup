@@ -3,7 +3,7 @@
 return array(
 
 	'driver'     => 'ORM', // orm/jelly/mango/sprig
-	'user_model' => 'User',
+	'user_model' => 'Users',
 	'cost'       => 12,    // Bcrypt Cost - any number between 4 and 31 -> higher = stronger hash
 
 	'cookie'     => array(

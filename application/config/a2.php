@@ -91,12 +91,12 @@ return array(
 			)
 			 */
             'pupil' =>array(
-                'role' => 'guest',
-                'resource' => array('auth'),
-                'privilege'=>array('login','logout')
+                'role' => 'pupil',
+                'resource' =>'pupil'
+
             ),
             'teacher' =>array(
-                'role' => 'guest',
+                'role' => 'teacher',
                 'resource' => 'teacher'
             ),
             'admin'=> array(

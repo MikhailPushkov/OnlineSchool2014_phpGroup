@@ -259,40 +259,42 @@ class Kohana_Database_PDO extends Database {
 			$column['is_nullable']      = ($row['Null'] == 'YES'); // Извлекаем признак поля IS_NULL
 			$column['ordinal_position'] = ++$count; // Запоминаем порядок следования
 
-			switch ($column['type']) // В зависимости от типа производим дополнительные действия
-			{
-				case 'float':
-					if (isset($length))
-						list($column['numeric_precision'], $column['numeric_scale']) = explode(',', $length);
-					break;
-				case 'int':
-					if (isset($length))
-						$column['display'] = $length;
-					break;
-				case 'string':
-					switch ($column['data_type'])
-					{
-						case 'binary':
-						case 'varbinary':
-							$column['character_maximum_length'] = $length;
-						break;
-						case 'char':
-						case 'varchar':
-							$column['character_maximum_length'] = $length;
-						case 'text':
-						case 'tinytext':
-						case 'mediumtext':
-						case 'longtext':
-							$column['collation_name'] = $row['Collation'];
-						break;
-						case 'enum':
-						case 'set':
-							$column['collation_name'] = $row['Collation'];
-							$column['options'] = explode('\',\'', substr($length, 1, -1));
-						break;
-					}
-				break;
-			}
+            if (isset($column['type']))
+                switch ($column['type']) // В зависимости от типа производим дополнительные действия
+                {
+                    case 'float':
+                        if (isset($length))
+                            list($column['numeric_precision'], $column['numeric_scale']) = explode(',', $length);
+                        break;
+                    case 'int':
+                        if (isset($length))
+                            $column['display'] = $length;
+                        break;
+                    case 'string':
+                        switch ($column['data_type'])
+                        {
+                            case 'binary':
+                            case 'varbinary':
+                                $column['character_maximum_length'] = $length;
+                            break;
+                            case 'char':
+                            case 'varchar':
+                                $column['character_maximum_length'] = $length;
+                            case 'text':
+                            case 'tinytext':
+                            case 'mediumtext':
+                            case 'longtext':
+                                if (isset($row['Collation']))
+                                    $column['collation_name'] = $row['Collation'];
+                            break;
+                            case 'enum':
+                            case 'set':
+                                $column['collation_name'] = $row['Collation'];
+                                $column['options'] = explode('\',\'', substr($length, 1, -1));
+                            break;
+                        }
+                    break;
+                }
 			$column['extra'] = $row['Extra']; // Извлекаем дополнительные атрибуты
 			$columns[$row['Field']] = $column; // Сохраняем структуру с данными о столбце
 		}

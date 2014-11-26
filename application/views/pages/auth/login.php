@@ -25,7 +25,7 @@
 
                                       <div class="checkbox">
                                         <label>
-                                           Запомнить меня <input type="checkbox">
+                                           Запомнить меня <input type="checkbox" name="remember">
                                            <button type="submit" style="margin-left: 60%;" name="btnsubmit" class="btn btn-default">Войти</button>
                                         </label>
 
