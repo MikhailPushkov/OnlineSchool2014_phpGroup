@@ -32,45 +32,344 @@
 
      <div id="admin_addus">
 
-            <table class="table-bordered">
+            <table class="table table-bordered" >
                 <tbody id = "mainTb">
                     <tr>
                         <td colspan="13" style="text-align: center;"><h4>Период дейсвия расписания дд.мм.гггг - дд.мм.гггг </h4> </td>
                     </tr>
                     <tr>
-                        <td rowspan="2"/*Обьединяем 2 ячейки по вертикали*/>Время урока</td>
-                        <td colspan="2" style="width: 50px;">Пн,</td>
-                        <td colspan="2">Вт, </td>
-                        <td colspan="2">Ср, </td>
-                        <td colspan="2">Чт, </td>
-                        <td colspan="2">Пт, </td>
-                        <td colspan="2">Сб, </td>
+                        <td colspan="2">Время урока</td>
+                        <td colspan="2" style="width: 16%;" >Понедельник</td>
+                        <td colspan="2" style=" width: 16%;">Вторник</td>
+                        <td colspan="2" style="width: 16%;">Среда</td>
+                        <td colspan="2" style="width: 16%;">Четверг</td>
+                        <td colspan="2"style="width: 16%;">Пятница</td>
+                        <td colspan="2" style="width: 16%;">Суббота</td>
 
                     </tr>
-                    <tr id = "thirdTr">
-                    <script>
-                    var thirdTr = document.getElementById("thirdTr");/*Получаем обьект 3ей строки и добавляем в него хтмл*/
-                    for(var i = 0; i !=6; i++)
-                    {
-                        thirdTr.innerHTML += "<td>Предмет</td>";
-                    }
-                    var arr = ["08:00 - 08:45","09:30 - 11:25","09:30 - 11:15","11:40 - 13:15","13:30 - 15:05","15:20 - 16:55","17:10 - 18:45"];
-                    var mainTb = document.getElementById("mainTb")/*Получаем обьект таблицы*/
-                    /*Цикл на добавление строк с парами*/
-                    for(var i = 0; i !=7; i++)
-                    {
-                        mainTb.innerHTML += '<tr id ="tr'+ i +'"><td>' +arr[i]+ '</td></tr>';
-                        var tr;
-                        tr = document.getElementById("tr" + i);
-                        for(var count = 0;count != 12; count++)
-                        {
-                            console.log('второй = '+ count)
-                            tr.innerHTML += '<td><input type="text" id="cell"/></td>';
-                        }
-                    }
+                       <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 8-00</div><div class="center">-</div>  <div  class="centertop">8-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
 
-                    </script>
-                            </tr>
+                    </tr>
+                      <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 9-00</div><div class="center">-</div>  <div  class="centertop">9-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+
+                    </tr>
+                      <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 10-00</div><div class="center">-</div>  <div  class="centertop">10-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+
+                    </tr>
+                      <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 11-00</div><div class="center">-</div>  <div  class="centertop">11-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+
+                    </tr>
+                      <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 12-00</div><div class="center">-</div>  <div  class="centertop">12-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+
+                    </tr>
+                      <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 13-00</div><div class="center">-</div>  <div  class="centertop">13-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+
+                    </tr>
+                      <tr>
+                    	<td colspan="2" style=" padding:0 !important;"><div class="center"> 14-00</div><div class="center">-</div>  <div  class="centertop">14-45</div> </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+                         <td colspan="2" class="padding well well-sm">
+                        <div class="fomr">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+	                        <input type="text" class="txt">
+                        </div>
+                        </td>
+
+                    </tr>
+                     
 
                 </tbody>
             </table>

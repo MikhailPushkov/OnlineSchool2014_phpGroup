@@ -401,3 +401,28 @@ margin-right:auto;
 #polnaya_inform .left{
     float: right;
 }
+#mainTb{
+
+}
+#mainTb .fomr{
+border: 1px outset rgb(162, 159, 156);
+
+width: 134px;
+}
+#mainTb .txt{
+    border: 1px dotted white;
+    height: 10px;
+    width: 90%;
+
+    margin-bottom: 0px;
+}
+#mainTb .padding{
+padding:0 !important;
+}
+#mainTb .center{
+text-align:center;
+}
+#mainTb .centertop{
+text-align:center;
+margin-top:5px;
+}
