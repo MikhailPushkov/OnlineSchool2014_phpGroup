@@ -129,7 +129,7 @@ a {
 a.button24 {
     font-size: 18px;
     font-weight: bold;
-    margin: -90px -269px 0 0;
+    margin: -63px -81px 0 0;
     float: right;
     display: inline-block;
     color: white;
@@ -183,7 +183,6 @@ a.buttonregistr {
 }
 .tableheader{
     background: #BADCD7 !important;
-
 }
 a.buttonregistr:active { text-decoration: none; }
 .buttonregistr {
@@ -196,6 +195,9 @@ a.buttonregistr:active { text-decoration: none; }
 }
 .kalapaarida{
     font-size: 25px;
+}
+.exit{
+    float: right;
 }
 #admin_addus{
     margin-left: auto;
@@ -388,4 +390,14 @@ input:focus:invalid {
 .eror_mes_auth {
     text-align: center;
 
+}
+#polnaya_inform{
+margin-left:auto;
+margin-right:auto;
+}
+#polnaya_inform .inf{
+    font-size: 17px;
+}
+#polnaya_inform .left{
+    float: right;
 }

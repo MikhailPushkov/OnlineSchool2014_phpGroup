@@ -5,7 +5,12 @@ class Controller_Auth extends Controller_System_Base  {
     public function action_index()
     {
         if($this->a1->logged_in()){
-            $this->request->controller();
+            if($this->a2->allowed('admin', 'index'))
+                $this->redirect('admin');
+            elseif($this->a2->allowed('pupil', 'index'))
+                $this->redirect('pupil');
+            elseif($this->a2->allowed('teacher', 'index'))
+                $this->redirect('teacher');
         }
         $this->title = 'Вход в систему';
         $this->txt = 'Электронная школа';
@@ -22,24 +27,19 @@ class Controller_Auth extends Controller_System_Base  {
         if (!$this->user) {
         	Message::error('Неверно введен логин или пароль! Повторите попытку ввода.');
         } else {
-	        if($this->a2->allowed('admin', 'index')){
-
-	               $this->redirect('admin');
-            }
+	        if($this->a2->allowed('admin', 'index'))
+               $this->redirect('admin');
 	        elseif($this->a2->allowed('pupil', 'index'))
 	            $this->redirect('pupil');
 	        elseif($this->a2->allowed('teacher', 'index'))
 	            $this->redirect('teacher');
-            $data['data']='<input type="submit" style=" float: right;  margin: -16px -85px"  class="buttonregistr" value="Выйти">';
-            $this->content = View::factory('layouts/header',$data);
+
         }
         $this->redirect('auth');
     }
     public function action_logout(){
-
-        Auth::instance()->logout();
-        $this->redirect('login');
-
+        $this->a1->logout();
+        $this->redirect('auth/login');
     }
     /*
   public  function  action_register(){

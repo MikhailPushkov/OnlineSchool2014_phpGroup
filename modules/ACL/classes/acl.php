@@ -1,3 +1,3 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
-class ACL extends ACL_Core {}
+class Acl extends Acl_Core {}

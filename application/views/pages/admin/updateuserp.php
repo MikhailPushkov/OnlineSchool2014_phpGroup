@@ -94,7 +94,7 @@
     <div class="row">
         <div id="admin_addus">
             <div class="span10">
-                <form class="form-horizontal"  action="http://localhost/new/admin/upuserp"  method="post" id="signupForm" role="form">
+                <form class="form-horizontal"  action="<?php echo URL::base(); ?>admin/upuserp"  method="post" id="signupForm" role="form">
                      <input type="hidden" name="id" value="<?php echo $data->id;?>"/>
                     <label class="align">Логин  <input type="text" name="username" value="<?php echo $data->username; ?>" class="form-control right" id="username" placeholder=" " ></label>
                     <label class="align">Пароль  <input type="password" name="password" value="<?php echo $data->password; ?>" class="form-control right" id="password" placeholder=" " ></label>
@@ -120,7 +120,7 @@
                     <div class="center">
                         <input type="submit"    name='rdbtn' class="buttonregistr" value="Сохранить">
 
-                        <input type="button"  onclick="location.href='index'"  name='redirect' class="buttonregistr" value="Отмена">
+                        <input type="button"  onclick="location.href='<?php echo URL::base() ?>admin'"  name='redirect' class="buttonregistr" value="Отмена">
                     </div>
                 </form>
             </div>

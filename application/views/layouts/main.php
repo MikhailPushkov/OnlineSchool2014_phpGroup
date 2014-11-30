@@ -6,6 +6,7 @@
 <head>
     <link href='http://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?php echo $title;?></title>
     <!-- LOAD CSS/JS FILES -->

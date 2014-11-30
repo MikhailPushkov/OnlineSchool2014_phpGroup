@@ -6,7 +6,6 @@ class Controller_Admin extends Controller_System_Base  {
 
         $this->title = 'Страница админа';
         $this->txt = 'Учетные записи';
-        $this->logout='<input type="submit" style=" float: right;  margin: -16px -85px"  class="buttonregistr" value="Выйти">';
         $this->content = View::factory('pages/admin/admin');
     }
     public function action_addusert(){

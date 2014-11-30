@@ -99,7 +99,7 @@ margin-left: 103px;
                              <div class="row">
                                <div id="admin_addus">
                                     <div class="span8">
-                                      <form class="form-horizontal"  method="post" action="addingusert" id="signupForm"  role="form">
+                                      <form class="form-horizontal"  method="post" action="<?php echo URL::base(); ?>admin/addingusert" id="signupForm"  role="form">
 
                                            <label class="align">Логин  <input type="text" name="username" class="form-control right" id="username" placeholder=" "></label>
                                            <label class="align">Пароль  <input type="password" name="password" class="form-control right" id="password" placeholder=" "></label>
@@ -109,8 +109,9 @@ margin-left: 103px;
                                            <label class="align">Отчество <input type="text" name="o" class="form-control right" id="o" placeholder=" "></label>
                                            <label class="align">email  <input type="text" name="email" class="form-control right" id="email" placeholder=" "></label>
                                            <label class="align">Телефон  <input type="text" name="phone" class="form-control right"  placeholder=" "></label>
-                                          <label class="align">Предмет  <a href="#" id="BtnPred" role="button" data-toggle="modal"><img class="addphoto" src="<?php echo URL::base(); ?>./img/add.png"/></a>
-                                              <table id="predmet"  class="table" style="margin-left: auto;width: 200px;margin-top: -20px;">
+                                          <label class="align">Предмет  <a href="#" id="BtnPred" role="button" data-toggle="modal"><img class="addphoto" src="<?php echo URL::base(); ?>./img/add.png"/></a></label>
+
+                                          <table id="predmet"  class="table" style="margin-left: auto;width: 200px;margin-top: -20px;">
                                                   <thead>
                                                   <td>Предмет</td><td hidden="true">ИД</td><td>Удалить</td></th>
                                                   </thead>
@@ -120,11 +121,10 @@ margin-left: 103px;
                                                   //echo '<tr><td>'.$data->fio.'</td><td hidden="true" class="id">'.$data->id.'</td><td>'.Form::button('delete', 'X', array('class'=>'btnDelete')).'</td></tr>'
                                                   ?>
                                                   </tbody>
-                                              </table></label>
-
+                                              </table>
                                           <div class="center">
                                               <input type="submit"  name='rdbtn' class="buttonregistr" value="Создать">
-                                              <input type="button"  onclick="location.href='index'"  name='redirect' class="buttonregistr" value="Отмена">
+                                              <input type="button"  onclick="location.href='<?php echo URL::base() ?>admin'"  name='redirect' class="buttonregistr" value="Отмена">
                                           </div>
 
                                       </form>

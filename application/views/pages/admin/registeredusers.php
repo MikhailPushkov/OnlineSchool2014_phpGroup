@@ -37,7 +37,7 @@
 
                     <button id="opener" style="
                    width: 20% !important;margin-left: 7%; background-color: #ffffff !important;" class="buttonregistr">Добавить</button>
-                    <a href="http://localhost/new/admin/" id="" style="
+                    <a href="<?php echo URL::base() ?>admin" id="" style="
     color: #005580 !important;
     font-size: 25px bold;
     float: right;

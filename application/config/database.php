@@ -14,9 +14,9 @@ return array
              * string   password    database password
              * boolean  persistent  use persistent connections?
              */
-            'dsn'        => 'mysql:host=localhost;dbname=kohana',
-            'username'   => 'root',
-            'password'   => '',
+            'dsn'        => 'mysql:host=mysql.hostinger.ru;dbname=u525145462_local',
+            'username'   => 'u525145462_local',
+            'password'   => 'kalaparida',
             'persistent' => FALSE,
 		),
 		'table_prefix' => '',
@@ -34,9 +34,9 @@ return array
 			 * string   password    database password
 			 * boolean  persistent  use persistent connections?
 			 */
-			'dsn'        => 'mysql:host=localhost;dbname=kohana',
-			'username'   => 'root',
-			'password'   => '',
+			'dsn'        => 'mysql:host=mysql.hostinger.ru;dbname=u525145462_local',
+			'username'   => 'u525145462_local',
+			'password'   => 'kalaparida',
 			'persistent' => FALSE,
 		),
 		/**

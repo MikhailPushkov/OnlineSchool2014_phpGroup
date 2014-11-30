@@ -82,8 +82,9 @@
                             <div class="container">
                                 <div class="row">
                                     <div id="admin_addus">
-                                    <div class="span10">
-                                      <form class="form-horizontal"  action="addinguserp"  method="post" id="signupForm" role="form">
+                                    <div class="span8">
+                                      <form class="form-horizontal"  action="<?php echo URL::base(); ?>admin/addinguserp"  method="post" id="signupForm" role="form">
+                                    
                                            <label class="align">Логин  <input type="text" name="username" class="form-control right" id="username" placeholder=" "></label>
                                            <label class="align">Пароль  <input type="password" name="password" class="form-control right" id="password" placeholder=" " ></label>
                                            <label class="align">Подтвердите пароль  <input type="password" name="confirm_password" class="form-control right" id="confirm_password" placeholder=" " ></label>
@@ -107,11 +108,13 @@
                                            </table>
                                           <div class="center">
                                               <input type="submit"  name='rdbtn' class="buttonregistr" value="Создать">
-                                              <input type="button"  onclick="location.href='index'"  name='redirect' class="buttonregistr" value="Отмена">
+                                              <input type="button"  onclick="location.href='<?php echo URL::base() ?>admin'"  name='redirect' class="buttonregistr" value="Отмена">
                                           </div>
+                                          
                                       </form>
-                                   </div>
-                                </div>
+                                      </div>
+
+                                                                   </div>
                               </div>
                             </div>
 

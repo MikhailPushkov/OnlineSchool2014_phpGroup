@@ -76,7 +76,7 @@
             </table>
          <div class="center" style="margin-top: 13px">
              <button id="opener-4" class="buttonregistr">Создать</button>
-             <input type="button"  onclick="location.href='index'"  name='redirect' class="buttonregistr" value="Отмена">
+             <input type="button"  onclick="location.href='<?php echo URL::base(); ?>admin'"  name='redirect' class="buttonregistr" value="Отмена">
          </div>
      </div>
  </div>
