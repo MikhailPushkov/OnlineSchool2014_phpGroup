@@ -10,5 +10,17 @@ class Controller_Pupil extends Controller_System_Base  {
         $this->txt = 'Профиль ученика';
         $this->content = View::factory('pages/userp/main_page')->bind('data',$model);
     }
+    public function action_diary(){
+
+    	  $this->title = 'Страница ученика';
+       	  $this->txt = 'Профиль ученика';
+    	  $this->content = View::factory('pages/userp/diary');
+    }
+    public function action_raiting(){
+
+    	 $this->title = 'Страница ученика';
+       	  $this->txt = 'Рейтинг успеваемости ученика';
+    	  $this->content = View::factory('pages/userp/raiting');
+    }
 
 } // End Welcome

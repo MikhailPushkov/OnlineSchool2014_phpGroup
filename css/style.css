@@ -357,7 +357,7 @@ input:focus:invalid {
 
 #profil_right .center{
     text-align: center;
-    margin-top: 120px;
+    margin-top: 35px;
 }
 #profil_right .btncenter{
     margin-bottom: 50px;
@@ -425,4 +425,56 @@ text-align:center;
 #mainTb .centertop{
 text-align:center;
 margin-top:5px;
+}
+#dnevnik {
+margin-left: auto;
+margin-right: auto;
+width: 90%;
+}
+#dnevnik .left{
+}
+#dnevnik .right{
+}
+#dnevnik .date{
+text-align: center;
+}
+#dnevnik .ahref{
+color: rgb(10, 10, 10) !important;
+font-size: 20px;
+text-decoration: underline !important;
+}
+#dnevnik .roddd{
+margin-top:10px;
+}
+#dnevnik .center{
+text-align: center;
+}
+#dnevnik .padding{
+padding: 0 !important;
+}
+#dnevnik .table th{
+ padding: 0 !important;
+}
+#dnevnik .table td {
+    padding: 0 !important;
+}
+#dnevnik .back{
+background-color: rgb(184, 184, 184);
+}
+#dnevnik .primechaniya{
+margin-left: 28px;
+}
+#raiting{
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+}
+#raiting .chetvert{
+float:right;
+}
+#raiting .left{
+}
+#raiting .right{
+margin-top: -29px;
+margin-left: -69%;
 }

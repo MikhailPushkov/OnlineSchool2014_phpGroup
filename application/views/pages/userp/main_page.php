@@ -58,12 +58,14 @@
             <div class="center">
 
                         <div class="btncenter">
-                          <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"   name='rdbtn' class="buttonregistr" value="Дневник">
+                          <a href="<?php echo URL::base(); ?>pupil/diary" style="font-size: 30px;width: 365px;"   name='rdbtn' role='button' class="buttonregistr">Дневник</a>
+                         
                         </div>
 
 
                         <div class="">
-                          <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"  name='rdbtn' class="buttonregistr" value="Рейтинг усеваемости">
+                         <a href="<?php echo URL::base(); ?>pupil/raiting" style="font-size: 30px;width: 365px;"   name='rdbtn' role='button' class="buttonregistr">Рейтинг усеваемости</a>
+                          
                         </div>
             </div>
             </div>

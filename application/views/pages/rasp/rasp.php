@@ -32,7 +32,7 @@
 
      <div id="admin_addus">
 
-            <table class="table table-bordered" >
+            <table class="table table-bordered table-hover" >
                 <tbody id = "mainTb">
                     <tr>
                         <td colspan="13" style="text-align: center;"><h4>Период дейсвия расписания дд.мм.гггг - дд.мм.гггг </h4> </td>

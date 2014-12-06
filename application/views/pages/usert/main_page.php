@@ -62,9 +62,13 @@
                 </div>
 
 
-                <div class="">
+                <div class="btncenter">
                     <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"  name='rdbtn' class="buttonregistr" value="Отчет">
                 </div>
+                 <div class="">
+                    <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"  name='rdbtn' class="buttonregistr" value="Расписание">
+                </div>
+
             </div>
         </div>
     </div>
