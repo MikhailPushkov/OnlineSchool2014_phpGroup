@@ -357,7 +357,7 @@ input:focus:invalid {
 
 #profil_right .center{
     text-align: center;
-    margin-top: 35px;
+    margin-top: 95px;
 }
 #profil_right .btncenter{
     margin-bottom: 50px;
@@ -477,4 +477,101 @@ float:right;
 #raiting .right{
 margin-top: -29px;
 margin-left: -69%;
+}
+#usertjur{
+}
+#usertjur .align{
+float: left;
+font-size: 22px;
+}
+#usertjur  .topr{
+float:left;
+}
+#usertjur  .top{
+margin-top: 20px;
+}
+#usertjur .rgstrcntr{
+text-align:center;
+margin-top: -26px;
+}
+#usertjur .cbx{
+margin-left: 91px;
+}
+
+#usertjur .topfm{
+margin-top:10px;
+}
+#usertjur .topfm .cbxklane{
+margin-left: 91px;
+}
+
+#jurnal{
+margin-left: auto;
+margin-right: auto;
+width: 80%;
+}
+
+#jurnal .uchipred{
+
+}
+#jurnal .tipblock{
+display:block;
+}
+#jurnal .tipblock2{
+display:block;
+float:left;
+padding-right: 60px;
+}
+#jurnal .peddomashka{
+margin-top: 8px;
+}
+#jurnal .table{
+
+}
+#jurnal .margin {
+margin-left:40%;
+}
+#jurnal .right{
+float:right;
+}
+#jurnal .top{
+margin-top:-8px;
+}
+#jurnal .table th,
+#jurnal .table td {
+    padding: 3px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 2.5px solid #dddddd;
+}
+#otchet {
+margin-left: auto;
+margin-right: auto;
+width: 60%;
+}
+#otchet  .lable{
+
+}
+#otchet .back{
+ background:rgb(184, 184, 184);
+}
+#otchet .clss{
+margin-top:10px;
+}
+#raspuch{
+margin-left: auto;
+margin-right: auto;
+width: 80%;
+}
+#raspuch .table{
+margin-top:10px;
+}
+#raspuch .table th,
+#raspuch .table td {
+    padding: 0;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: middle;
+    border-top: 2.5px solid #dddddd;
 }

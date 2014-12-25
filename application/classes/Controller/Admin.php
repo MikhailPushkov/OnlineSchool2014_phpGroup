@@ -4,18 +4,22 @@ class Controller_Admin extends Controller_System_Base  {
 
     public function action_index(){
 
+        $query="SELECT * from class";
+        $data=DB::query(Database::SELECT,$query)->execute();
         $this->title = 'Страница админа';
         $this->txt = 'Учетные записи';
-        $this->content = View::factory('pages/admin/admin');
+        $this->content = View::factory('pages/admin/admin')->bind('dat',$data);
     }
     public function action_addusert(){
         $this->txt = 'Учетные записи';
         $this->content = View::factory('pages/admin/addusert');
     }
     public function action_adduserp(){
-    	//$model = ORM::factory('', $id);
+          $query="SELECT * from class";
+        $data=DB::query(Database::SELECT,$query)->execute();
+        //$model = ORM::factory('', $id);
         $this->txt = 'Учетные записи';
-        $this->content = View::factory('pages/admin/adduserp');//->bind('datas', $model);
+        $this->content = View::factory('pages/admin/adduserp')->bind('data', $data);
     }
     public function action_addingus(){
         if (isset($_POST['rdbtn'])) {
@@ -28,15 +32,22 @@ class Controller_Admin extends Controller_System_Base  {
             }
         }
     }
-    public function action_rasp()
-    {
+
+    
+    public function action_rasp(){
+            $query="SELECT*,(Select f from teacher t where s.teacherid=t.id)as fio,
+                            (Select article from subject a where s.subjectid=a.id) as name 
+                    from subject_teacher s";
+        $data=DB::query(Database::SELECT,$query)->execute();
+
         $this->title = 'Расписание';
         $this->txt ='Расписание для класса '  . $_POST['combo'];
-        $this->content = View::factory('pages/rasp/rasp');
+        $combo=$_POST['combo'];
+        $this->content = View::factory('pages/rasp/rasp')->bind('data',$data)->bind('combo',$combo);
     }
     public function action_addpredmet(){
         if(isset($_POST)){
-            $model=ORM::factory('Articles')->values($_POST)->save();
+            $model=ORM::factory('Subject')->values($_POST)->save();
         }
         $this->json['id'] = $model->id;
         $this->json['article'] = $model->article;
@@ -44,20 +55,20 @@ class Controller_Admin extends Controller_System_Base  {
     public  function action_addrealitv(){
 
         if(isset($_POST)){
-            $model=ORM::factory('Realitive')->values($_POST)->save();
+            $model=ORM::factory('Relative')->values($_POST)->save();
         }
         $this->json['id'] = $model->id;
         $this->json['fio'] = $model->familia.' '.$model->imya.' '.$model->otchestvo.' ('.$model->tiprodstv.')';
     }
     public function action_delpredmet(){
         if(isset($_POST['id']))
-            $model=ORM::factory('Articles', $_POST['id'])->delete();
+            $model=ORM::factory('Subject', $_POST['id'])->delete();
         $this->json[] = "OK";
     }
     public function action_deleterealitv() {
-    	if(isset($_POST['id']))
-    		$model=ORM::factory('Realitive', $_POST['id'])->delete();
-    	$this->json[] = "OK";
+        if(isset($_POST['id']))
+            $model=ORM::factory('Relative', $_POST['id'])->delete();
+        $this->json[] = "OK";
     }
 
     public function action_deluserp(){
@@ -85,7 +96,7 @@ class Controller_Admin extends Controller_System_Base  {
 
         $this->txt = 'Управление учетными записями';
 
-        $query='(Select id,email,username,f,i,o,table_role from pupil)
+        $query='(Select id,(select email from realitive where realitive.id=(,username,f,i,o,table_role from pupil)
                 UNION
                 (Select id,email,username,f,i,o,table_role from teacher)
                 Order by f

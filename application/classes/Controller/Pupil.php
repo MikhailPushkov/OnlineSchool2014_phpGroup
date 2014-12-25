@@ -11,6 +11,9 @@ class Controller_Pupil extends Controller_System_Base  {
         $this->content = View::factory('pages/userp/main_page')->bind('data',$model);
     }
     public function action_diary(){
+        
+        $query="SELECT * from lesson";
+        $data=DB::query(Database::SELECT,$query)->execute();
 
     	  $this->title = 'Страница ученика';
        	  $this->txt = 'Профиль ученика';

@@ -4,8 +4,6 @@ class Model_Users extends ORM implements Acl_Role_Interface {
 
     protected $_table_name='users';
 
-
-
     /**
      * Returns the string identifier of the Role
      *

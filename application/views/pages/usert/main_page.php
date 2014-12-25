@@ -56,17 +56,116 @@
         <div id ='profil_right'>
 
             <div class="center">
+             <script>
+                        $(function() {
+                            $( "#dialog-1" ).dialog({
+                                autoOpen: false,
+                                hide: "size",
+                                show : "slide",
+                                height: 200
+                            });
+                            $( "#openning" ).click(function() {
+                                $( "#dialog-1" ).dialog( "open" );
+                            });
+                        });
+            </script>
+                    <div id="dialog-1" title="Открыть журнал">
+                        <form  role="form" method="post" action="<?php echo URL::base(); ?>teacher/jurnal" name="form">
+
+                            <div id="usertjur">
+
+                                <div  class="top">
+                                        <label class="align">Предмет  </label>
+                                      <select class="cbx" onchange="document.getElementById('predmet').value=this.value;" style="margin-left: 50px !important;">
+                                        <option value=""></option>
+                                        <?php foreach ($dat as $item)
+                                            echo '<option value="'.$item['artic'].'">'.$item['artic'].'</option>';
+                                        ?>
+                                        </select>
+                                        <input name="predmet" id="predmet" type = "hidden"  value = ""/>
+                                        <div class="topfm">
+                                          <label class="align">Класс  </label>
+                                        <select class="cbx" onchange="document.getElementById('clas').value=this.value;" size=1>
+                                        <option value=""></option>
+                                        <?php foreach ($dat as $item)
+                                            echo '<option value="'.$item['num'].'">'.$item['num'].'</option>';
+                                        ?>
+                                    
+                                        </select>
+                                        <input name="clas" id="clas" type = "hidden"  value = ""/>
+                                        </div>
+                                </div>
+
+                                <div class="rgstrcntr">
+                                    <input type="submit" style="margin-top: 33px;" name='addbtn' class="buttonregistr" value="OK">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                 <script>
+                        $(function() {
+                            $( "#dialog-export" ).dialog({
+                                autoOpen: false,
+                                hide: "size",
+                                show : "slide",
+                                height: 200
+                            });
+                            $( "#openexport" ).click(function() {
+                                $( "#dialog-export" ).dialog( "open" );
+                            });
+                        });
+            </script>
+                    <div id="dialog-export" title="Посмотреть отчет">
+                        <form  role="form" method="post" action="<?php echo URL::base(); ?>teacher/export" name="form">
+
+                            <div id="usertjur">
+
+                                <div  class="top">
+                                        <label class="align">Предмет  </label>
+                                        <select class="cbx"  onchange="document.getElementById('predmet').value=this.value;" size=1>
+                                            <option>A</option>
+                                            <option>Б</option>
+                                            <option>В</option>
+                                            <option>Г</option>
+                                            <option>Д</option>
+                                        </select>
+                                        <input name="predmet" id="predmet" type = "hidden"  value = ""/>
+
+                                
+                                        <div class="topfm">
+                                          <label class="align">Класс  </label>
+                                        <select  class="cbx"  style="margin-left:122px;" onchange="document.getElementById('combo').value=this.value;" size=1>
+                                            <option>A</option>
+                                            <option>Б</option>
+                                            <option>В</option>
+                                            <option>Г</option>
+                                            <option>Д</option>
+                                        </select>
+                                        <input name="combo" id="combo" type = "hidden"  value = ""/>
+                                        </div>
+                                </div>
+
+                                <div class="rgstrcntr">
+                                    <input type="submit" style="margin-top: 33px;" name='addbtn' class="buttonregistr" value="OK">
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
 
                 <div class="btncenter">
-                    <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"   name='rdbtn' class="buttonregistr" value="Электронный журнал">
+                     <input type="submit" id="openning"  style="font-size: 30px;width: 419px;" name='rdbtn' class="buttonregistr" value="Электронный журнал">
+                        
                 </div>
-
-
                 <div class="btncenter">
-                    <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"  name='rdbtn' class="buttonregistr" value="Отчет">
+                      <input type="submit" id="openexport"  style="font-size: 30px;width: 419px;" name='rdbtdasdn' class="buttonregistr" value="Отчет">
+                     
                 </div>
                  <div class="">
-                    <input type="submit"  style="font-size: 30px;height: 100px;width: 365px;"  name='rdbtn' class="buttonregistr" value="Расписание">
+                     <a href="<?php echo URL::base(); ?>teacher/rasp" style="font-size: 30px;width: 365px;"   name='rdbtn' role='button' class="buttonregistr">Расписание</a>
                 </div>
 
             </div>

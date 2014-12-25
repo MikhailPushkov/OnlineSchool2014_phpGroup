@@ -16,7 +16,6 @@ class Controller_Auth extends Controller_System_Base  {
         $this->txt = 'Электронная школа';
         $this->content = View::factory('pages/auth/login');
     }
-
     public function action_login() {
         if(count($_POST)==0) {
         	Message::error('Неверно введен логин или пароль! Повторите попытку ввода.');
@@ -33,7 +32,6 @@ class Controller_Auth extends Controller_System_Base  {
 	            $this->redirect('pupil');
 	        elseif($this->a2->allowed('teacher', 'index'))
 	            $this->redirect('teacher');
-
         }
         $this->redirect('auth');
     }
@@ -41,20 +39,6 @@ class Controller_Auth extends Controller_System_Base  {
         $this->a1->logout();
         $this->redirect('auth/login');
     }
-    /*
-  public  function  action_register(){
-
-        if(HTTP_REQUEST::POST == $this->request->method()){
-            try{
-                $user=ORM::factory('user')->create_user($_POST,array('username','password','email'));
-                $user->add('roles','1');
-                $this->redirect('auth/login');
-
-            }catch (ORM_Validation_Exception $ex){
-                $errors =$ex->errors('models');
-            }
-        }
-
-    }*/
+  
 
 } // End Welcome

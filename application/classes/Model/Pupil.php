@@ -4,8 +4,8 @@ class Model_Pupil extends ORM {
 
     protected $_table_name ='pupil';
     protected $_table_columns=array(
-        'id'=>array(
-            'type'=>'int',
+        'ID'=>array(
+            'type'=>'int(10)',
             'is_nullable'=>false
 
         ),
@@ -14,8 +14,13 @@ class Model_Pupil extends ORM {
             'is_nullable'=>false
 
         ),
+         'classid'=>array(
+            'type'=>'int(10)',
+            'is_nullable'=>false
+
+        ),
         'table_role'=>array(
-            'type'=>'varchar(30)',
+            'type'=>'varchar(25)',
             'is_nullable'=>false
 
         ),
@@ -45,7 +50,7 @@ class Model_Pupil extends ORM {
 
         ),
         'address'=>array(
-            'type'=>'varchar(65)',
+            'type'=>'varchar(55)',
             'is_nullable'=>false
 
         ),
@@ -55,19 +60,20 @@ class Model_Pupil extends ORM {
 
         ),
         'datebirth'=>array(
-            'type'=>'varchar(25)',
-            'is_nullable'=>false
-
-        ),
-        'rodstv'=>array(
-            'type'=>'varchar(25)',
+            'type'=>'varchar(55)',
             'is_nullable'=>false
 
         ),
         'email'=>array(
-            'type'=>'varchar(45)',
+            'type'=>'varchar(55)',
             'is_nullable'=>false
 
         ),
+        'year_of_entering'=>array(
+            'type'=>'varchar(20)',
+            'is_nullable'=>false
+
+        ),
+
     );
 }

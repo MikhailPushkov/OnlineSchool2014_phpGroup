@@ -92,7 +92,18 @@
                                            <label class="align">Имя  <input type="text" name="i" class="form-control right" id="i" placeholder=" " ></label>
                                            <label class="align">Отчество <input type="text"  name="o" class="form-control right" id="v" placeholder=" " ></label>
                                            <label class="align">Адрес  <input type="text" name="address" class="form-control right" id="address" placeholder=" " ></label>
-                                           <label class="align">Класс  <input type="text" name="class" class="form-control right" id="class" placeholder=" " ></label>
+                                           <label class="align">Класс 
+
+                                              <select class="cbx form-control right"  onchange="document.getElementById('clas').value=this.value;" style="width: 45%;" size=1>
+                                             <?php foreach ($data as $item)
+                                                echo '<option value="'.$item['number'].'">'.$item['number'].'</option>';
+                                             ?>
+                                            </select>
+                                            <input name="clas" id="clas" type = "hidden"  value = ""/>
+
+
+
+                                            </label>
                                            <label class="align">Дата рождения  <input type="date" name="datebirth" class="form-control right" id="datebirth" placeholder=" " ></label>
                                            <label class="align">Родственник  <a href="#" id="myModalBtn" role="button" data-toggle="modal"><img class="addphotos" src="<?php echo URL::base(); ?>./img/add.png"/></a></label>
                                            <table id="rodstv"  class="table" style="margin-left: auto;width: 200px;margin-top: -47px;">

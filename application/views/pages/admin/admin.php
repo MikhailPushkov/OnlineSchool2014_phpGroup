@@ -49,16 +49,15 @@
                             <div id="addrasp">
 
                                 <div  style="margin-top: 20px;">
-
                                         <select class="cbx" onchange="document.getElementById('combo').value=this.value;" size=1>
-                                            <option>A</option>
-                                            <option>Б</option>
-                                            <option>В</option>
-                                            <option>Г</option>
-                                            <option>Д</option>
+                                        <?php foreach ($dat as $item)
+                                        	echo '<option value="'.$item['number'].'">'.$item['number'].'</option>';
+                                        ?>
+                                    
                                         </select>
                                         <input name="combo" id="combo" type = "hidden"  value = ""/>
-
+                                   
+                                  
                                 </div>
                                 <div class="rgstrcntr">
                                     <input type="submit" style="margin-top: 33px;" name='addbtn' class="buttonregistr" value="Добавить">
